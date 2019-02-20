@@ -4,7 +4,7 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 
-export const FaqTemplate = ({ question, category, date, content, contentComponent }) => {
+export const FaqTemplate = ({ question, category, date, answer, contentComponent }) => {
   const PageContent = contentComponent || Content
 
   return (
@@ -18,7 +18,7 @@ export const FaqTemplate = ({ question, category, date, content, contentComponen
               </h2>
               <p>{category}</p>
               <p>{date}</p>
-              <PageContent className="content" content={content} />
+              <PageContent className="content" content={answer} />
             </div>
           </div>
         </div>
@@ -28,8 +28,10 @@ export const FaqTemplate = ({ question, category, date, content, contentComponen
 }
 
 FaqTemplate.propTypes = {
-  title: PropTypes.string.isRequired,
-  content: PropTypes.string,
+  question: PropTypes.string.isRequired,
+  answer: PropTypes.node.isRequired,
+  category: PropTypes.string,
+  date: PropTypes.string,
   contentComponent: PropTypes.func,
 }
 
@@ -42,6 +44,8 @@ const Faq = ({ data }) => {
         contentComponent={HTMLContent}
         question={post.frontmatter.question}
         answer={post.html}
+        date={post.frontmatter.date}
+        category={post.frontmatter.category}
       />
     </Layout>
   )
@@ -62,6 +66,7 @@ export const faqQuery = graphql`
         title
         category
         date(formatString: "MMMM DD, YYYY")
+        answer
       }
     }
   }

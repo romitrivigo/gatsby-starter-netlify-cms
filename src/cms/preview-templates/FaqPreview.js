@@ -7,7 +7,7 @@ const FaqPreview = ({ entry, widgetFor }) => (
     question={entry.getIn(['data', 'title'])}
     category={entry.getIn(['data', 'category'])}
     date={entry.getIn(['data', 'date'])}
-    content={widgetFor('answer')}
+    answer={widgetFor('body')}
   />
 )
 
