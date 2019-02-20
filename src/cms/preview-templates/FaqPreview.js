@@ -6,7 +6,7 @@ const FaqPreview = ({ entry, widgetFor }) => (
   <FaqTemplate
     question={entry.getIn(['data', 'title'])}
     category={entry.getIn(['data', 'category'])}
-    date={entry.getIn(['data', 'date'])}
+    date={entry.getIn(['data', 'date']).toString()}
     answer={widgetFor('body')}
   />
 )

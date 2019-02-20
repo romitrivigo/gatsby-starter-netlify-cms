@@ -6,7 +6,7 @@ import Content, { HTMLContent } from '../components/Content'
 
 export const FaqTemplate = ({ question, category, date, answer, contentComponent }) => {
   const PageContent = contentComponent || Content
-
+  
   return (
     <section className="section section--gradient">
       <div className="container">
@@ -18,6 +18,7 @@ export const FaqTemplate = ({ question, category, date, answer, contentComponent
               </h2>
               <p>{category}</p>
               <p>{date}</p>
+              <hr />
               <PageContent className="content" content={answer} />
             </div>
           </div>
