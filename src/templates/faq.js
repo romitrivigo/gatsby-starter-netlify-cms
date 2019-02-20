@@ -42,7 +42,7 @@ const Faq = ({ data }) => {
     <Layout>
       <FaqTemplate
         contentComponent={HTMLContent}
-        question={post.frontmatter.question}
+        question={post.frontmatter.title}
         answer={post.html}
         date={post.frontmatter.date}
         category={post.frontmatter.category}
