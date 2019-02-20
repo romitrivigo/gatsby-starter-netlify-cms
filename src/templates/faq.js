@@ -66,7 +66,6 @@ export const faqQuery = graphql`
         title
         category
         date(formatString: "MMMM DD, YYYY")
-        answer
       }
     }
   }
