@@ -2,6 +2,9 @@ backend:
   name: bitbucket
   repo: romitchoudhary/gatsby-starter-netlify-cms
   branch: master
+  base_url: https://api.netlify.com
+  auth_endpoint: auth
+  site_domain: cms.netlify.com
 
 site_url: "https://optimistic-volhard-907bd5.netlify.com"
 
