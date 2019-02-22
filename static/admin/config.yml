@@ -1,6 +1,9 @@
 backend:
-  name: git-gateway
+  name: bitbucket
+  repo: romitchoudhary/gatsby-starter-netlify-cms
   branch: master
+
+site_url: "https://optimistic-volhard-907bd5.netlify.com"
 
 media_folder: static/img
 public_folder: /img

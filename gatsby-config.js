@@ -75,7 +75,9 @@ module.exports = {
     {
       resolve: `gatsby-plugin-s3`,
      options: {
-         bucketName: 'romit-rivigo-support-netlifycms'
+        bucketName: 'romit-rivigo-support-netlifycms',
+        protocol: "https",
+        hostname: "www.romit-rivigo-support-netlifycms.s3-website-us-east-1.amazonaws.com",
      },
     },
     'gatsby-plugin-netlify', // make sure to keep it last in the array
